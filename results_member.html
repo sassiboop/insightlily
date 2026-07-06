@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Inter', sans-serif; }
+  </style>
+</helmet>
+
+<div style="min-height:100vh;background:white;">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid oklch(0.92 0.005 90);">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:32px;height:32px;border-radius:999px;background:oklch(0.9 0.02 200);"></div>
+      <span style="font-size:17px;font-weight:600;color:oklch(0.2 0.01 90);">Airwhim</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:28px;">
+      <span style="font-size:14px;color:oklch(0.4 0.01 90);">How it works</span>
+      <div style="display:flex;align-items:center;gap:9px;cursor:pointer;">
+        <div style="width:32px;height:32px;border-radius:999px;background:oklch(0.5 0.1 200);color:white;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;min-height:calc(100vh - 73px);">
+    <div style="width:480px;flex-shrink:0;position:relative;background:repeating-linear-gradient(90deg, oklch(0.95 0.01 200), oklch(0.95 0.01 200) 1px, oklch(0.99 0.003 200) 1px, oklch(0.99 0.003 200) 36px), repeating-linear-gradient(0deg, oklch(0.95 0.01 200), oklch(0.95 0.01 200) 1px, oklch(0.99 0.003 200) 1px, oklch(0.99 0.003 200) 36px);border-right:1px solid oklch(0.92 0.005 90);">
+      <span style="font-family:monospace;font-size:12px;color:oklch(0.55 0.03 200);position:absolute;top:16px;left:20px;">route map placeholder</span>
+      <div style="position:absolute;top:70px;left:70px;font-size:22px;">🇻🇳</div>
+      <div style="position:absolute;top:160px;left:200px;font-size:22px;">🇶🇦</div>
+      <div style="position:absolute;top:120px;left:330px;font-size:22px;">🇬🇧</div>
+      <div style="position:absolute;top:250px;left:280px;font-size:22px;">🇦🇪</div>
+      <div style="position:absolute;top:340px;left:170px;font-size:22px;">🇳🇬</div>
+      <div style="position:absolute;top:390px;left:350px;font-size:22px;">🇩🇪</div>
+    </div>
+
+    <div style="flex:1;padding:40px 56px;min-width:0;max-width:1000px;">
+      <sc-if value="{{ showBreadcrumb }}" hint-placeholder-val="{{ true }}">
+        <div style="font-size:13px;color:oklch(0.55 0.01 90);margin-bottom:14px;">
+          <span>Home</span>
+          <span style="margin:0 6px;color:oklch(0.75 0.01 90);">/</span>
+          <span>2026 Germany Trip</span>
+          <span style="margin:0 6px;color:oklch(0.75 0.01 90);">/</span>
+          <span style="color:oklch(0.3 0.01 90);font-weight:600;">Entry requirements</span>
+        </div>
+      </sc-if>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 18px;margin-bottom:24px;">
+        <span style="font-size:26px;font-weight:700;color:oklch(0.2 0.01 90);">Entry requirements</span>
+        <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end;">
+          <sc-if value="{{ showSaveLink }}" hint-placeholder-val="{{ true }}">
+            <span style="font-size:14px;color:oklch(0.5 0.1 200);font-weight:600;">Save trip</span>
+          </sc-if>
+        </div>
+      </div>
+
+      <div style="border:1px solid oklch(0.9 0.005 90);border-radius:12px;padding:22px 26px;margin-bottom:28px;background:oklch(0.985 0.003 90);">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px; justify-content: space-between">
+          <span style="font-size:12px;font-weight:700;color:oklch(0.5 0.01 90);letter-spacing:0.03em;">SEARCH SUMMARY</span>
+          <span style="font-size:13px;font-weight:600;color:oklch(0.5 0.1 200);cursor:pointer;">Edit trip</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap;">
+          <div style="flex:1 1 150px;min-width:0;display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:oklch(0.95 0.03 200);border:1px solid oklch(0.85 0.05 200);overflow:hidden;">
+            <span style="font-size:26px;flex-shrink:0;">🇻🇳</span>
+            <div style="min-width:0;"><div style="font-size:9.5px;font-weight:700;letter-spacing:0.05em;color:oklch(0.5 0.08 200);white-space:nowrap;">ORIGIN</div><div style="font-size:17px;font-weight:800;color:oklch(0.2 0.01 90);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Vietnam</div></div>
+          </div>
+          <div style="position:relative;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px;color:oklch(0.5 0.01 90);cursor:pointer;" onClick="{{ toggleTransit }}">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="14 6 20 12 14 18"></polyline></svg>
+            <span style="font-size:11.5px;font-weight:600;background:oklch(0.94 0.01 90);padding:3px 9px;border-radius:999px;display:flex;align-items:center;gap:3px;">2 stops<svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="{{ chevronStyle }}"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            <sc-if value="{{ showTransit }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;top:100%;margin-top:8px;left:50%;transform:translateX(-50%);width:220px;background:white;border:1px solid oklch(0.88 0.005 90);border-radius:10px;box-shadow:0 8px 24px oklch(0 0 0 / 0.12);padding:12px 14px;z-index:10;">
+                <div style="font-size:10.5px;font-weight:700;letter-spacing:0.04em;color:oklch(0.55 0.01 90);margin-bottom:8px;">TRANSIT STOPS</div>
+                <div style="display:flex;flex-direction:column;gap:7px;">
+                  <div style="font-size:12.5px;color:oklch(0.3 0.01 90);">🇶🇦 Qatar <span style="color:oklch(0.6 0.01 90);">· airside</span></div>
+                  <div style="font-size:12.5px;color:oklch(0.3 0.01 90);">🇬🇧 United Kingdom</div>
+                  <div style="font-size:12.5px;color:oklch(0.3 0.01 90);">🇦🇪 United Arab Emirates</div>
+                  <div style="font-size:12.5px;color:oklch(0.3 0.01 90);">🇳🇬 Nigeria</div>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+          <div style="flex:1 1 150px;min-width:0;display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:oklch(0.95 0.03 200);border:1px solid oklch(0.85 0.05 200);overflow:hidden;">
+            <span style="font-size:26px;flex-shrink:0;">🇩🇪</span>
+            <div style="min-width:0;"><div style="font-size:9.5px;font-weight:700;letter-spacing:0.05em;color:oklch(0.5 0.08 200);white-space:nowrap;">DESTINATION</div><div style="font-size:17px;font-weight:800;color:oklch(0.2 0.01 90);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Germany</div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:16px;border-top:1px solid oklch(0.93 0.005 90);">
+          <div style="display:flex;justify-content:space-between;align-items:center;width:100%;box-sizing:border-box;"><span style="font-size:11.5px;color:oklch(0.55 0.01 90);">CITIZENSHIP</span><span style="font-size:13px;font-weight:600;color:oklch(0.25 0.01 90);">🇻🇳 Vietnam</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;width:100%;box-sizing:border-box;"><span style="font-size:11.5px;color:oklch(0.55 0.01 90);">LENGTH OF STAY</span><span style="font-size:13px;font-weight:600;color:oklch(0.25 0.01 90);">{{ lengthOfStay }}</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;width:100%;box-sizing:border-box;"><span style="font-size:11.5px;color:oklch(0.55 0.01 90);">PURPOSE</span><span style="font-size:13px;font-weight:600;color:oklch(0.25 0.01 90);">{{ purposeLabel }}</span></div>
+        </div>
+      </div>
+
+      <div style="font-size:13px;font-weight:700;color:oklch(0.4 0.01 90);letter-spacing:0.03em;margin-bottom:10px;">DESTINATION</div>
+      <div style="border:1px solid oklch(0.9 0.005 90);border-radius:12px;overflow:hidden;margin-bottom:28px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:oklch(0.98 0.006 200);">
+          <span style="font-size:16px;font-weight:700;color:oklch(0.2 0.01 90);display:flex;align-items:center;gap:7px;">🇩🇪 Entering Germany<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="oklch(0.55 0.01 90)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="cursor:pointer;flex-shrink:0;" title="View Germany country page"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+          <span style="padding:6px 12px;border-radius:999px;background:oklch(0.93 0.09 75);color:oklch(0.45 0.13 60);font-size:13px;font-weight:600;">Visa on arrival</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;padding:20px 22px;">
+          <div><div style="font-size:11.5px;color:oklch(0.55 0.01 90);">VISA TYPE</div><div style="font-size:14.5px;color:oklch(0.25 0.01 90);margin-top:4px;">Visa on Arrival</div></div>
+          <div><div style="font-size:11.5px;color:oklch(0.55 0.01 90);">VALIDITY</div><div style="font-size:14.5px;color:oklch(0.25 0.01 90);margin-top:4px;">Up to 30 days, valid 6 months</div></div>
+          <div><div style="font-size:11.5px;color:oklch(0.55 0.01 90);">COST</div><div style="font-size:14.5px;color:oklch(0.25 0.01 90);margin-top:4px;">USD 25 (paid at border)</div></div>
+          <div><div style="font-size:11.5px;color:oklch(0.55 0.01 90);">PROCESSING</div><div style="font-size:14.5px;color:oklch(0.25 0.01 90);margin-top:4px;">Immediate</div></div>
+          <div><div style="font-size:11.5px;color:oklch(0.55 0.01 90);">WHEN TO APPLY</div><div style="font-size:14.5px;color:oklch(0.25 0.01 90);margin-top:4px;">At the port of entry</div></div>
+          <div><div style="font-size:11.5px;color:oklch(0.55 0.01 90);">WHERE TO APPLY</div><div style="font-size:14.5px;color:oklch(0.25 0.01 90);margin-top:4px;">Immigration desk at arrival airport</div></div>
+        </div>
+      </div>
+
+      <div style="font-size:13px;font-weight:700;color:oklch(0.4 0.01 90);letter-spacing:0.03em;margin-bottom:10px;">LAYOVER COUNTRIES</div>
+      <div style="border:1px solid oklch(0.9 0.005 90);border-radius:12px;margin-bottom:24px;">
+        <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;padding:12px 20px;background:oklch(0.97 0.003 90);font-size:12px;font-weight:700;color:oklch(0.5 0.01 90);border-radius:12px 12px 0 0;column-gap:10px;">
+          <div>COUNTRY</div>
+          <div style="display:flex;align-items:center;gap:5px;">
+            TRANSIT VISA
+            <svg onClick="{{ toggleTransitInfo }}" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="oklch(0.6 0.01 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor:pointer;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="11.5"></line><circle cx="12" cy="7.5" r="0.6" fill="oklch(0.6 0.01 90)" stroke="none"></circle></svg>
+            <div style="position:relative;">
+              <sc-if value="{{ showTransitInfo }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute;top:8px;left:0;width:250px;background:white;border:1px solid oklch(0.87 0.005 90);border-radius:6px;box-shadow:0 6px 20px oklch(0 0 0 / 0.1);padding:12px 14px;z-index:20;font-weight:400;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+                    <span style="font-size:10.5px;font-weight:700;letter-spacing:0.04em;color:oklch(0.5 0.01 90);">TRANSIT VS. ENTRY VISA</span>
+                    <span onClick="{{ closeInfo }}" style="cursor:pointer;color:oklch(0.6 0.01 90);font-size:15px;line-height:1;padding:0 2px;">×</span>
+                  </div>
+                  <div style="font-size:12.5px;line-height:1.5;color:oklch(0.35 0.01 90);"><strong>Transit</strong> — needed to pass airside without leaving the airport. <strong>Entry</strong> — needed if you plan to leave the airport (e.g. change terminals, explore, or a longer layover).</div>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+          <div>ENTRY VISA</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;padding:14px 20px;align-items:center;border-top:1px solid oklch(0.93 0.005 90);">
+          <div style="font-size:14.5px;color:oklch(0.25 0.01 90);display:flex;align-items:center;gap:6px;">🇶🇦 Qatar<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="oklch(0.6 0.01 90)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="cursor:pointer;flex-shrink:0;" title="View Qatar country page"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></div>
+          <div><span style="font-size:12.5px;font-weight:600;color:oklch(0.45 0.13 60);background:oklch(0.93 0.09 75);padding:4px 10px;border-radius:999px;">Authorization required</span></div>
+          <div><span style="font-size:12.5px;font-weight:600;color:oklch(0.45 0.13 60);background:oklch(0.93 0.09 75);padding:4px 10px;border-radius:999px;">Visa required</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;padding:14px 20px;align-items:center;border-top:1px solid oklch(0.93 0.005 90);">
+          <div style="font-size:14.5px;color:oklch(0.25 0.01 90);display:flex;align-items:center;gap:6px;">🇬🇧 United Kingdom<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="oklch(0.6 0.01 90)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="cursor:pointer;flex-shrink:0;" title="View United Kingdom country page"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></div>
+          <div><span style="font-size:12.5px;font-weight:600;color:oklch(0.42 0.1 155);background:oklch(0.93 0.06 155);padding:4px 10px;border-radius:999px;">No visa required</span></div>
+          <div><span style="font-size:12.5px;font-weight:600;color:oklch(0.45 0.13 60);background:oklch(0.93 0.09 75);padding:4px 10px;border-radius:999px;">Visa required</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;padding:14px 20px;align-items:center;border-top:1px solid oklch(0.93 0.005 90);">
+          <div style="font-size:14.5px;color:oklch(0.25 0.01 90);display:flex;align-items:center;gap:6px;">🇦🇪 United Arab Emirates<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="oklch(0.6 0.01 90)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="cursor:pointer;flex-shrink:0;" title="View United Arab Emirates country page"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></div>
+          <div><span style="font-size:12.5px;font-weight:600;color:oklch(0.42 0.1 155);background:oklch(0.93 0.06 155);padding:4px 10px;border-radius:999px;">No visa required</span></div>
+          <div><span style="font-size:12.5px;font-weight:600;color:oklch(0.5 0.09 75);background:oklch(0.95 0.06 85);padding:4px 10px;border-radius:999px;">Visa on arrival</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;padding:14px 20px;align-items:center;border-top:1px solid oklch(0.93 0.005 90);border-radius:0 0 12px 12px;">
+          <div style="font-size:14.5px;color:oklch(0.25 0.01 90);display:flex;align-items:center;gap:6px;">🇳🇬 Nigeria<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="oklch(0.6 0.01 90)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="cursor:pointer;flex-shrink:0;" title="View Nigeria country page"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></div>
+          <div><span style="font-size:12.5px;font-weight:600;color:oklch(0.42 0.1 155);background:oklch(0.93 0.06 155);padding:4px 10px;border-radius:999px;">No visa required</span></div>
+          <div><span style="font-size:12.5px;font-weight:600;color:oklch(0.45 0.13 60);background:oklch(0.93 0.09 75);padding:4px 10px;border-radius:999px;">Visa required</span></div>
+        </div>
+      </div>
+
+      <div style="font-size:12px;color:oklch(0.6 0.01 90);">ⓘ Preliminary guidance — will update once connected to an official visa data provider.</div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showBreadcrumb&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Navigation&quot; },
+  &quot;showSaveLink&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Navigation&quot; },
+  &quot;purposeLabel&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Personal&quot;, &quot;Business&quot;, &quot;Digital nomad&quot;], &quot;default&quot;: &quot;Business&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Trip details&quot; }
+}">
+class Component extends DCLogic {
+  state = { showTransit: false, showTransitInfo: false };
+  renderVals() {
+    const showTransit = this.state.showTransit;
+    return {
+      showTransit,
+      toggleTransit: () => this.setState(s => ({ showTransit: !s.showTransit })),
+      chevronStyle: { transform: showTransit ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' },
+      showBreadcrumb: this.props.showBreadcrumb ?? true,
+      showSaveLink: this.props.showSaveLink ?? true,
+      lengthOfStay: '14 days (Jul 10 – Jul 24, 2026)',
+      purposeLabel: this.props.purposeLabel ?? 'Business',
+      showTransitInfo: this.state.showTransitInfo,
+      toggleTransitInfo: () => this.setState(s => ({ showTransitInfo: !s.showTransitInfo })),
+      closeInfo: () => this.setState({ showTransitInfo: false }),
+    };
+  }
+}
+</script>
+</body>
+</html>
